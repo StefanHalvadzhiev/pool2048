@@ -3,7 +3,7 @@ const config = {
     type: Phaser.AUTO,
     width: window.innerWidth,
     height: window.innerHeight,
-    scene: [MenuScene, GameScene] // Reference classes directly
+    scene: [MenuScene, GameScene, OptionsScene] // Reference classes directly
 };
 
 const game = new Phaser.Game(config);

@@ -16,6 +16,6 @@ class MenuScene extends Phaser.Scene {
         this.add.text(centerX - 50, centerY + 90, "Options", { fontSize: "24px", fill: "#fff" });
 
         startButton.on("pointerdown", () => this.scene.start("GameScene"));
-        optionsButton.on("pointerdown", () => console.log("Options Clicked"));
+        optionsButton.on("pointerdown", () => this.scene.start("OptionsScene"));
     }
 }
