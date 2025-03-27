@@ -1,12 +1,14 @@
-import { preload } from './preload.js';
-import { create } from './create.js';
-import { update } from './update.js';
-
+// Import scenes the standard way
 const config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
-    scene: { preload, create, update }
+    width: window.innerWidth,
+    height: window.innerHeight,
+    scene: [MenuScene, GameScene] // Reference classes directly
 };
 
 const game = new Phaser.Game(config);
+
+// Resize game when window resizes
+window.addEventListener("resize", () => {
+    game.scale.resize(window.innerWidth, window.innerHeight);
+});
